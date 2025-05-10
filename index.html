@@ -36,6 +36,7 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/comparison.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -68,7 +69,7 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container has-text-centered is-max-desktop">
-      <h2 class="title is-3">DualPipe results</h2>
+      <h2 class="title is-3">Minute-Long Videos</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
@@ -137,152 +138,190 @@
 </section>
 <!-- End video carousel -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
+<!-- Comparison Module -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Comparison</h2>
+      
+      <!-- First Row of Videos -->
+      <div class="comparison-row">
+        <div class="method-videos">
+          <div class="method-video">
+            <h3 class="method-title">DualPipe</h3>
+            <video src="static/videos/comparision/DualPipe/A person wearing a dark blue shirt is gently petting a tabby ca.mp4" autoplay controls muted loop></video>
+          </div>
+          <div class="method-video">
+            <h3 class="method-title">FIFO</h3>
+            <video src="static/videos/comparision/FIFO/A person wearing a dark blue shirt is gently petting a tabby ca.mp4" autoplay controls muted loop></video>
+          </div>
+          <div class="method-video">
+            <h3 class="method-title">Ulysses</h3>
+            <video src="static/videos/comparision/Ulysses/A_person_wearing_a_dark_blue_shirt_is_gently_petti.mp4" autoplay controls muted loop></video>
+          </div>
+          <div class="method-video">
+            <h3 class="method-title">Video_Infinity</h3>
+            <video src="static/videos/comparision/Video_Infinity/A person wearing a dark b.mp4" autoplay controls muted loop></video>
+          </div>
+        </div>
+        <button class="prompt-button" data-prompt="A person wearing a dark blue shirt is gently petting a tabby cat lying on a red table. The cat, adorned with a white garment featuring cartoon characters, appears relaxed and content as the person strokes its head and body. The background is plain and light-colored, keeping the focus on the interaction between the person and the cat.">
+          View Prompt
+        </button>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      
+      <!-- Second Row of Videos -->
+      <div class="comparison-row">
+        <div class="method-videos">
+          <div class="method-video">
+            <h3 class="method-title">DualPipe</h3>
+            <video src="static/videos/comparision/DualPipe/A young man, with soft fe.mp4" autoplay controls muted loop></video>
+          </div>
+          <div class="method-video">
+            <h3 class="method-title">FIFO</h3>
+            <video src="static/videos/comparision/FIFO/A young man, with soft features and an expression of serene astonishment, is s.mp4" autoplay controls muted loop></video>
+          </div>
+          <div class="method-video">
+            <h3 class="method-title">Ulysses</h3>
+            <video src="static/videos/comparision/Ulysses/A_young_man_with_soft_features_and_an_expression.mp4" autoplay controls muted loop></video>
+          </div>
+          <div class="method-video">
+            <h3 class="method-title">Video_Infinity</h3>
+            <video src="static/videos/comparision/Video_Infinity/A young man, with soft fe.mp4" autoplay controls muted loop></video>
+          </div>
+        </div>
+        <button class="prompt-button" data-prompt="A young man, with soft features and an expression of serene astonishment, is slowly drifting above a sun-drenched field of swaying grass. Filmed in a retro cinematic style with warm golden tones and slight grain, side light accentuates the texture of his tousled hair as the wind gently brushes through it.">
+          View Prompt
+        </button>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Comparison Module -->
+
+<!-- Prompt Modal -->
+<div id="prompt-modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4>Prompt Details</h4>
+      <button class="delete" aria-label="close"></button>
+    </div>
+    <div class="modal-body">
+      <p id="modal-prompt"></p>
     </div>
   </div>
 </div>
-</div>
-</section>
-<!-- End image carousel -->
+
+<script>
+  // 初始化模态框
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('prompt-modal');
+    const buttons = document.querySelectorAll('.prompt-button');
+    const closeButton = document.querySelector('.delete');
+    const modalBackground = document.querySelector('.modal-background');
+    const modalPrompt = document.getElementById('modal-prompt');
+    
+    // 点击按钮显示模态框
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const prompt = button.getAttribute('data-prompt');
+        modalPrompt.textContent = prompt;
+        modal.classList.add('is-active');
+      });
+    });
+    
+    // 关闭模态框
+    closeButton.addEventListener('click', () => {
+      modal.classList.remove('is-active');
+    });
+    
+    modalBackground.addEventListener('click', () => {
+      modal.classList.remove('is-active');
+    });
+    
+    // ESC键关闭模态框
+    document.addEventListener('keydown', (event) => {
+      if (event.code === 'Escape') {
+        modal.classList.remove('is-active');
+      }
+    });
+  });
+</script>
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- Video Gallery -->
+<section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="custom-carousel-cotainer has-text-centered is-max-desktop">
+      <h2 class="title is-3">Gallery</h2>
+      <div id="results-carousel" class="carousel results-carousel custom-carousel">
+        <div class="item item-video1">
+          <div class="gallery-item-wrapper">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/16s/2.mp4" type="video/mp4">
+            </video>
+            <button class="bottom-prompt-button" data-prompt="Film quality, professional quality, rich in details. The video begins to show the surface of a pond, and the camera gradually zooms in to a close-up. The water surface began to bubble, and then a handsome boy in a coat emerged from the lotus pond, soaked through, with a subtle change in the expression on his face.">
+              View Prompt
+            </button>
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="gallery-item-wrapper">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <source src="static/videos/16s/9.mp4" type="video/mp4">
+            </video>
+            <button class="bottom-prompt-button" data-prompt="An exquisite macro shot captures a blooming rose in vibrant motion, as delicate petals unfurl gracefully, glistening dew drops dance in the sunlight, revealing nature's breathtaking beauty with stunning detail and rich colors., 4k, high definition.">
+              View Prompt
+            </button>
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="gallery-item-wrapper">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">
+              <source src="static/videos/16s/10.mp4" type="video/mp4">
+            </video>
+            <button class="bottom-prompt-button" data-prompt="An exhilarating white water rafting experience unfolds, with waves crashing against the sturdy raft and excited participants cheering, surrounded by breathtaking natural scenery that heightens the thrill.">
+              View Prompt
+            </button>
+          </div>
+        </div>
+        <div class="item item-video4">
+          <div class="gallery-item-wrapper">
+            <video poster="" id="video4" autoplay controls muted loop height="100%">
+              <source src="static/videos/16s/11.mp4" type="video/mp4">
+            </video>
+            <button class="bottom-prompt-button" data-prompt="A panoramic view of the Milky Way, ultra HD.">
+              View Prompt
+            </button>
+          </div>
+        </div>
+        <div class="item item-video5">
+          <div class="gallery-item-wrapper">
+            <video poster="" id="video5" autoplay controls muted loop height="100%">
+              <source src="static/videos/16s/12.mp4" type="video/mp4">
+            </video>
+            <button class="bottom-prompt-button" data-prompt="A mysterious foggy forest at dawn, high quality, 4K.">
+              View Prompt
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <!--source src="static/videos/carousel1.mp4" -->
-            <source src="static/videos/2ba2188d066c62285af66f683158de80.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+<!-- End Video Gallery-->
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+<!--  <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
-  <footer class="footer">
+<!--  <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
@@ -298,7 +337,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer>-->
 
 <!-- Statcounter tracking code -->
   

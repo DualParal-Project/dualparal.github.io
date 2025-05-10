@@ -133,5 +133,56 @@ body {
   font-size: smaller;
 }
 
+.custom-carousel {
+  overflow: hidden;
+}
+.custom-carousel-container {
+  max-width: 1000px; /* 按需增大最大宽度值 */
+  margin: 0 auto;
+}
+.custom-carousel .item {
+  margin: 15px;
+  overflow: hidden;
+  padding: 0;
+  font-size: 0;
+  width: calc(100% - 0px);
+  box-sizing: border-box;
+  display: inline-block;
+}
+.custom-carousel video {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+}
 
 
+/* 在index.css中添加以下内容 */
+.gallery-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bottom-prompt-button {
+  margin-top: 10px;
+  background-color: #333; 
+  color: white; 
+  border: none; 
+  padding: 0.75rem 1.5rem; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  margin-left: 1rem;
+  align-self: center;
+  transition: background-color 0.2s;
+}
+
+.bottom-prompt-button:hover {
+  background: #555;
+}
+
+/* 确保视频宽度适应容器 */
+.gallery-item-wrapper video {
+  width: 100%;
+  max-width: 800px; /* 可根据需要调整 */
+}
