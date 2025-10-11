@@ -10,7 +10,7 @@ $(document).ready(function() {
         loop: true,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 40000
     }
     // 初始化custom-carousel
     var customCarousels = bulmaCarousel.attach('.custom-carousel', customOptions)
@@ -21,7 +21,7 @@ $(document).ready(function() {
 			loop: true,
 			infinite: true,
 			autoplay: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 40000,
     }
 
 		// Initialize all div with carousel class

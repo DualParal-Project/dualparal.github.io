@@ -186,3 +186,53 @@ body {
   width: 100%;
   max-width: 800px; /* 可根据需要调整 */
 }
+
+/* ==== Modal fix: 确保内容在遮罩之上，且水平垂直居中 ==== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;                 /* 等价于 top/right/bottom/left: 0 */
+  z-index: 9990;            /* 比页面其他元素都高 */
+}
+.modal.is-active {
+  display: flex;            /* 用 flex 居中 */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-background {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 0;               /* 背景在下面 */
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1;               /* 内容在上面 */
+  width: min(90vw, 720px);
+  max-height: 80vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+}
+
+/* 头部样式可选优化 */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 关闭按钮保持可点 */
+.modal .delete {
+  position: relative;
+  z-index: 2;
+}
+

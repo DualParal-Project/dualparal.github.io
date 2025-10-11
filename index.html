@@ -366,7 +366,7 @@
   // 初始化模态框
   document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('prompt-modal');
-    const buttons = document.querySelectorAll('.prompt-button');
+    const buttons = document.querySelectorAll('.prompt-button, .bottom-prompt-button');
     const closeButton = document.querySelector('.delete');
     const modalBackground = document.querySelector('.modal-background');
     const modalPrompt = document.getElementById('modal-prompt');
@@ -404,7 +404,7 @@
   <div class="hero-body">
     <div class="custom-carousel-cotainer has-text-centered is-max-desktop">
       <h2 class="title is-3">Gallery</h2>
-      <div id="results-carousel" class="carousel results-carousel custom-carousel">
+      <div id="gallery-carousel" class="carousel results-carousel custom-carousel" data-autoplay="true" data-autoplay-speed="16000">
         <div class="item item-video1">
           <div class="gallery-item-wrapper">
             <video poster="" id="video1" autoplay controls muted loop height="100%">
