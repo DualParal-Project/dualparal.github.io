@@ -150,65 +150,203 @@
 </section>
 <!-- End video carousel -->
 
-<!-- Comparison Module -->
-<section class="hero is-small">
+<!-- Comparison (Carousel, single row, no extra buttons) -->
+<section class="hero is-small" id="comparison">
   <div class="hero-body">
-    <div class="container has-text-centered">
+    <div class="container has-text-centered is-max-widescreen">
       <h2 class="title is-3">Comparison</h2>
-      
-      <!-- First Row of Videos -->
-      <div class="comparison-row">
-        <div class="method-videos">
-          <div class="method-video">
-            <h3 class="method-title">Ulysses</h3>
-            <video src="static/videos/comparision/Ulysses/A_person_wearing_a_dark_blue_shirt_is_gently_petti.mp4" autoplay controls muted loop></video>
+
+      <!-- 单行轮播：每个 item 是同一条 prompt 的四个方法视频 -->
+      <div id="comparison-carousel" class="carousel results-carousel">
+        <!-- Item 1 -->
+        <div class="item comp-item">
+          <div class="method-videos">
+            <div class="method-video">
+              <h3 class="method-title">Ulysses</h3>
+              <video src="static/videos/comparision/Ulysses/3.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">Video_Infinity</h3>
+              <video src="static/videos/comparision/Video_Infinity/3.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">FIFO</h3>
+              <video src="static/videos/comparision/FIFO/3.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">DualParal</h3>
+              <video src="static/videos/comparision/DualParal/3.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
           </div>
-          <div class="method-video">
-            <h3 class="method-title">Video_Infinity</h3>
-            <video src="static/videos/comparision/Video_Infinity/A person wearing a dark b.mp4" autoplay controls muted loop></video>
-          </div>
-          <div class="method-video">
-            <h3 class="method-title">FIFO</h3>
-            <video src="static/videos/comparision/FIFO/A person wearing a dark blue shirt is gently petting a tabby ca.mp4" autoplay controls muted loop></video>
-          </div>
-          <div class="method-video">
-            <h3 class="method-title">DualParal</h3>
-            <video src="static/videos/comparision/DualPipe/A person wearing a dark blue shirt is gently petting a tabby ca.mp4" autoplay controls muted loop></video>
-          </div>
+
+          <!-- 直接展示 prompt 文本 -->
+          <h2 class="subtitle has-text-centered">
+            A vibrant cherry blossom festival in full bloom. Petals drift gently in the breeze, crowds wander along tree-lined paths, lanterns sway softly, and sunlight filters through pink blossoms. The camera pans and tilts dynamically, capturing delicate flowers, joyful faces, and the festive atmosphere in high-resolution detail.
+          </h2>
         </div>
-        <button class="prompt-button" data-prompt="A person wearing a dark blue shirt is gently petting a tabby cat lying on a red table. The cat, adorned with a white garment featuring cartoon characters, appears relaxed and content as the person strokes its head and body. The background is plain and light-colored, keeping the focus on the interaction between the person and the cat.">
-          View Prompt
-        </button>
-      </div>
-      
-      <!-- Second Row of Videos -->
-      <div class="comparison-row">
-        <div class="method-videos">
-          <div class="method-video">
-            <h3 class="method-title">Ulysses</h3>
-            <video src="static/videos/comparision/Ulysses/A_young_man_with_soft_features_and_an_expression.mp4" autoplay controls muted loop></video>
+
+        <!-- Item 2 -->
+        <div class="item comp-item">
+          <div class="method-videos">
+            <div class="method-video">
+              <h3 class="method-title">Ulysses</h3>
+              <video src="static/videos/comparision/Ulysses/4.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">Video_Infinity</h3>
+              <video src="static/videos/comparision/Video_Infinity/4.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">FIFO</h3>
+              <video src="static/videos/comparision/FIFO/4.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">DualParal</h3>
+              <video src="static/videos/comparision/DualParal/4.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
           </div>
-          <div class="method-video">
-            <h3 class="method-title">Video_Infinity</h3>
-            <video src="static/videos/comparision/Video_Infinity/A young man, with soft fe.mp4" autoplay controls muted loop></video>
-          </div>
-          <div class="method-video">
-            <h3 class="method-title">FIFO</h3>
-            <video src="static/videos/comparision/FIFO/A young man, with soft features and an expression of serene astonishment, is s.mp4" autoplay controls muted loop></video>
-          </div>
-          <div class="method-video">
-            <h3 class="method-title">DualParal</h3>
-            <video src="static/videos/comparision/DualPipe/A young man, with soft fe.mp4" autoplay controls muted loop></video>
-          </div>
+
+          <!-- 直接展示 prompt 文本 -->
+          <h2 class="subtitle has-text-centered">
+            Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field.
+          </h2>
         </div>
-        <button class="prompt-button" data-prompt="A young man, with soft features and an expression of serene astonishment, is slowly drifting above a sun-drenched field of swaying grass. Filmed in a retro cinematic style with warm golden tones and slight grain, side light accentuates the texture of his tousled hair as the wind gently brushes through it.">
-          View Prompt
-        </button>
+
+        <!-- Item 3 -->
+        <div class="item comp-item">
+          <div class="method-videos">
+            <div class="method-video">
+              <h3 class="method-title">Ulysses</h3>
+              <video src="static/videos/comparision/Ulysses/A_person_wearing_a_dark_blue_shirt_is_gently_petti.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">Video_Infinity</h3>
+              <video src="static/videos/comparision/Video_Infinity/A person wearing a dark b.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">FIFO</h3>
+              <video src="static/videos/comparision/FIFO/A person wearing a dark blue shirt is gently petting a tabby ca.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">DualParal</h3>
+              <video src="static/videos/comparision/DualParal/A person wearing a dark blue shirt is gently petting a tabby ca.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+          </div>
+
+          <!-- 直接展示 prompt 文本 -->
+          <h2 class="subtitle has-text-centered">
+            A person wearing a dark blue shirt is gently petting a tabby cat lying on a red table. The cat, adorned with a white garment featuring cartoon characters, appears relaxed and content as the person strokes its head and body. The background is plain and light-colored, keeping the focus on the interaction between the person and the cat.
+          </h2>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="item comp-item">
+          <div class="method-videos">
+            <div class="method-video">
+              <h3 class="method-title">Ulysses</h3>
+              <video src="static/videos/comparision/Ulysses/A_young_man_with_soft_features_and_an_expression.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">Video_Infinity</h3>
+              <video src="static/videos/comparision/Video_Infinity/A young man, with soft fe.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">FIFO</h3>
+              <video src="static/videos/comparision/FIFO/A young man, with soft features and an expression of serene astonishment, is s.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">DualParal</h3>
+              <video src="static/videos/comparision/DualParal/A young man, with soft fe.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+          </div>
+
+          <h2 class="subtitle has-text-centered">
+            A young man, with soft features and an expression of serene astonishment, is slowly drifting above a sun-drenched field of swaying grass. Filmed in a retro cinematic style with warm golden tones and slight grain, side light accentuates the texture of his tousled hair as the wind gently brushes through it.
+          </h2>
+        </div>
+        
+        <!-- Item 5 -->
+        <div class="item comp-item">
+          <div class="method-videos">
+            <div class="method-video">
+              <h3 class="method-title">Ulysses</h3>
+              <video src="static/videos/comparision/Ulysses/2.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">Video_Infinity</h3>
+              <video src="static/videos/comparision/Video_Infinity/2.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">FIFO</h3>
+              <video src="static/videos/comparision/FIFO/2.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">DualParal</h3>
+              <video src="static/videos/comparision/DualParal/2.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+          </div>
+
+          <h2 class="subtitle has-text-centered">
+            Inside a futuristic high-tech factory, a humanoid robot meticulously assembles mechanical components. The camera tracks along robotic arms and glowing conveyor belts as sparks flash. Holographic displays light the metallic interior, showing blue data streams. The scene feels alive with precision, motion, and the hum of advanced machines working in harmony.
+          </h2>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="item comp-item">
+          <div class="method-videos">
+            <div class="method-video">
+              <h3 class="method-title">Ulysses</h3>
+              <video src="static/videos/comparision/Ulysses/1.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">Video_Infinity</h3>
+              <video src="static/videos/comparision/Video_Infinity/1.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">FIFO</h3>
+              <video src="static/videos/comparision/FIFO/1.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+            <div class="method-video">
+              <h3 class="method-title">DualParal</h3>
+              <video src="static/videos/comparision/DualParal/1.mp4"
+                     autoplay controls muted loop playsinline></video>
+            </div>
+          </div>
+
+          <h2 class="subtitle has-text-centered">
+            A playful beagle wearing sleek diving goggles swims energetically through the ocean. The camera follows its fluid motion in first-person perspective, capturing the sparkle of sunlight through turquoise waves. Colorful coral reefs sway below, bubbles rise toward the surface, and tiny fish dart playfully around, adding depth and life to the underwater world.
+          </h2>
+        </div>
+
+        <!-- 如需更多比较组，复制上面 <div class="item comp-item"> ... </div> 结构继续添加 -->
       </div>
     </div>
   </div>
 </section>
-<!-- End Comparison Module -->
+
 
 <!-- Prompt Modal -->
 <div id="prompt-modal" class="modal">

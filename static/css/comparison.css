@@ -1,124 +1,64 @@
-/* Comparison Module Styles */
+/* === Comparison Module: single-row & larger videos === */
+
+/* 仅放大 Comparison 模块的容器宽度（需要在 HTML 的该 section 上加 id="comparison"） */
+#comparison .container {
+  max-width: 1400px;   /* 想更大可用 1600px */
+  margin: 0 auto;
+}
+
+/* 外框保持你的风格 */
 .comparison-row {
-    display: flex;
-    margin-bottom: 2rem;
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .method-videos {
-    display: flex;
-    flex: 1;
-    gap: 1rem;
-  }
-  
-  .method-video {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .method-title {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .method-video video {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  .prompt-button {
-    /*background-color: #007BFF;*/
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 1rem;
-    align-self: center;
-    transition: background-color 0.2s;
-  }
-  
-  .prompt-button:hover {
-    /*background-color: #0056b3;*/
-    background-color: #555;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .comparison-row {
-      flex-direction: column;
-    }
-    
-    .prompt-button {
-      margin-left: 0;
-      margin-top: 1rem;
-      width: 100%;
-    }
-    
-    .method-videos {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .method-video {
-      margin-bottom: 1rem;
-      min-width: 150px;
-    }
-  }
-  
-  /* Modal Styles */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal.is-active {
-    display: block;
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-  }
-  
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #dee2e6;
-  }
-  
-  .modal-header h4 {
-    margin: 0;
-  }
-  
-  .delete {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-      
+  display: block;                     /* 改为 block，让内部网格撑满宽度 */
+  margin-bottom: 2rem;
+  background-color: #f8f9fa;
+  padding: 1.25rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 用网格实现“一行四个”且更大 */
+.method-videos {
+  display: grid;                      /* 从 flex 改为 grid */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;                       /* 20px 间距 */
+  align-items: start;
+}
+
+.method-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.method-title {
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.05rem;    /* 提一点字号 */
+  letter-spacing: .2px;
+}
+
+
+/* 关键：去掉 250px 限制，按列自适应放大 */
+.method-video video {
+  width: 100%;
+  max-width: none;                    /* 移除原来的 250px 限制 */
+  aspect-ratio: 16 / 9;               /* 统一高宽比，视觉整齐 */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  display: block;
+}
+
+/* 如果你不再需要“查看 Prompt”的按钮，也可以把这个样式删掉 */
+.prompt-button { display: none; }
+
+/* 响应式：窄屏自动降为 2 列或 1 列，避免太挤 */
+@media (max-width: 1200px) {
+  #comparison .container { max-width: 1100px; }
+  .method-videos { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .method-videos { grid-template-columns: 1fr; }
+}
