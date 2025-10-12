@@ -216,7 +216,7 @@
 
           <!-- 直接展示 prompt 文本 -->
           <h2 class="subtitle has-text-centered">
-            Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field.
+            [4k, Film Composition,f1.8]Several giant wooly mammoths approach treading through a snowy meadow, their long wooly fur lightly blows in the wind as they walk, snow covered trees and dramatic snow capped mountains in the distance, mid afternoon light with wispy clouds and a sun high in the distance creates a warm glow, the low camera view is stunning capturing the large furry mammal with beautiful photography, depth of field.
           </h2>
         </div>
 
@@ -400,66 +400,146 @@
 
 
 <!-- Video Gallery -->
-<section class="hero is-small">
+<section class="hero is-small" id="gallery">
   <div class="hero-body">
-    <div class="custom-carousel-cotainer has-text-centered is-max-desktop">
-      <h2 class="title is-3">Gallery</h2>
-      <div id="gallery-carousel" class="carousel results-carousel custom-carousel" data-autoplay="true" data-autoplay-speed="16000">
-        <div class="item item-video1">
-          <div class="gallery-item-wrapper">
-            <video poster="" id="video1" autoplay controls muted loop height="100%">
-              <source src="static/videos/16s/2.mp4" type="video/mp4">
-            </video>
-            <button class="bottom-prompt-button" data-prompt="Film quality, professional quality, rich details. The video begins to show the surface of a pond, and the camera slowly zooms in to a close-up. The water surface begins to bubble, and then a blonde woman is seen coming out of the lotus pond soaked all over, showing the subtle changes in her facial expression, creating a dreamy atmosphere.">
-              View Prompt
-            </button>
-          </div>
+        <div class="container is-fluid">
+      <h2 class="title is-3 has-text-centered">Gallery</h2>
+
+      <!-- Row 1: WAN2.1 -->
+      <div class="gallery-row">
+        <div class="row-title">
+          <span class="method-badge">WAN2.1</span>
         </div>
-        <div class="item item-video2">
-          <div class="gallery-item-wrapper">
-            <video poster="" id="video2" autoplay controls muted loop height="100%">
-              <source src="static/videos/16s/9.mp4" type="video/mp4">
-            </video>
-            <button class="bottom-prompt-button" data-prompt="An exquisite macro shot captures a blooming rose in vibrant motion, as delicate petals unfurl gracefully, glistening dew drops dance in the sunlight, revealing nature's breathtaking beauty with stunning detail and rich colors., 4k, high definition.">
-              View Prompt
-            </button>
-          </div>
-        </div>
-        <div class="item item-video3">
-          <div class="gallery-item-wrapper">
-            <video poster="" id="video3" autoplay controls muted loop height="100%">
-              <source src="static/videos/16s/10.mp4" type="video/mp4">
-            </video>
-            <button class="bottom-prompt-button" data-prompt="An exhilarating white water rafting experience unfolds, with waves crashing against the sturdy raft and excited participants cheering, surrounded by breathtaking natural scenery that heightens the thrill.">
-              View Prompt
-            </button>
-          </div>
-        </div>
-        <div class="item item-video4">
-          <div class="gallery-item-wrapper">
-            <video poster="" id="video4" autoplay controls muted loop height="100%">
-              <source src="static/videos/16s/11.mp4" type="video/mp4">
-            </video>
-            <button class="bottom-prompt-button" data-prompt="A panoramic view of the Milky Way, ultra HD.">
-              View Prompt
-            </button>
-          </div>
-        </div>
-        <div class="item item-video5">
-          <div class="gallery-item-wrapper">
-            <video poster="" id="video5" autoplay controls muted loop height="100%">
-              <source src="static/videos/16s/12.mp4" type="video/mp4">
-            </video>
-            <button class="bottom-prompt-button" data-prompt="A mysterious foggy forest at dawn, high quality, 4K.">
-              View Prompt
-            </button>
+        <div class="row-carousel">
+          <div id="gallery-carousel-1" class="carousel results-carousel custom-carousel">
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.1/2.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="Film quality, professional quality, rich details. The video begins to show the surface of a pond, and the camera slowly zooms in to a close-up. The water surface begins to bubble, and then a blonde woman is seen coming out of the lotus pond soaked all over, showing the subtle changes in her facial expression, creating a dreamy atmosphere.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.1/9.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="An exquisite macro shot captures a blooming rose in vibrant motion, as delicate petals unfurl gracefully, glistening dew drops dance in the sunlight, revealing nature's breathtaking beauty with stunning detail and rich colors., 4k, high definition.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.1/10.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="An exhilarating white water rafting experience unfolds, with waves crashing against the sturdy raft and excited participants cheering, surrounded by breathtaking natural scenery that heightens the thrill.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.1/11.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="A panoramic view of the Milky Way, ultra HD.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.1/12.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="A mysterious foggy forest at dawn, high quality, 4K.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Row 2: WAN2.2  (示例复用同一批视频，按需把 src 换成第二行素材) -->
+      <div class="gallery-row">
+        <div class="row-title">
+          <span class="method-badge">WAN2.2</span>
+        </div>
+        <div class="row-carousel">
+          <div id="gallery-carousel-2" class="carousel results-carousel custom-carousel">
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.2/1.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="A white-suited astronaut with a gold visor spins in dark space, tethered by a drifting cable. Stars twinkle around him as Earth glows blue in the distance. His suit reflects faint starlight against the vastness of the cosmos.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.2/2.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="A flock of birds glides through the warm sunset sky, wings outstretched. Their feathers catch golden light as they soar above silhouetted treetops, with the sky glowing in soft hues of amber and pink.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.2/3.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="A colony of penguins waddles across a vast Antarctic ice sheet under golden evening light. The camera moves low to the ground, following their synchronized steps as wind sweeps across drifting snow. Reflections shimmer on the ice surface, and distant glaciers glow softly in the fading sunlight, evoking a peaceful natural rhythm.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.2/4.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="[Van Gogh Style] A rajidae fish swims gracefully through swirling blue waters painted in Van Gogh’s signature texture. The camera glides beside it, revealing coral reefs rendered in thick, vivid brushstrokes. Light ripples across the ocean floor, colors shift dynamically, and each movement of the fish leaves behind subtle trails of luminous pigment.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="gallery-item-wrapper">
+                <video autoplay controls muted loop playsinline>
+                  <source src="static/videos/16s_wan2.2/5.mp4" type="video/mp4">
+                </video>
+                <button class="bottom-prompt-button" data-prompt="[4K, Film Composition, f1.8] A cinematic close-up of an astronaut floating weightlessly in deep space. The camera slowly orbits, capturing reflections of distant galaxies on the astronaut’s visor. Stars shimmer in breathtaking clarity, the Earth rotates far below, and faint lens flares evoke a sense of isolation, awe, and quiet majesty in the cosmic expanse.">
+                  View Prompt
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 <!-- End Video Gallery-->
+
 
 <!--BibTex citation -->
 <!--  <section class="section" id="BibTeX">
